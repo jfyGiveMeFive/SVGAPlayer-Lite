@@ -259,6 +259,7 @@
 				90A676D91D13A6DF008A69F3 /* Sources */,
 				90A676DA1D13A6DF008A69F3 /* Frameworks */,
 				90A676DB1D13A6DF008A69F3 /* Resources */,
+				4CEF197B6EFC2D99094D0D8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +281,7 @@
 				TargetAttributes = {
 					90A676DC1D13A6DF008A69F3 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6T969RZXD8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -327,6 +329,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4CEF197B6EFC2D99094D0D8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SVGAPlayerLite/Pods-SVGAPlayerLite-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Protobuf/Protobuf_Privacy.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Protobuf_Privacy.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SVGAPlayerLite/Pods-SVGAPlayerLite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CD70B01EE331E392E355CD26 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,11 +506,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6T969RZXD8;
 				INFOPLIST_FILE = SVGAPlayerLite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.svgaplayer.lite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nila.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,11 +524,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6T969RZXD8;
 				INFOPLIST_FILE = SVGAPlayerLite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.svgaplayer.lite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nila.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
