@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SVGAPlayerLite"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "SVGAPlayerLite 是一个轻量级高性能的动画播放器"
   s.description  = <<-DESC
                    SVGAPlayerLite 是基于 SVGAPlayer 的轻量级版本；
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/jfyGiveMeFive/SVGAPlayer-Lite"
   s.license      = "Apache 2.0"
-  s.author       = { "jfyGiveMeFive" => "aygtech@qq.com" }
+  s.author       = { "jfyGiveMeFive" => "jfyGiveMeFive@users.noreply.github.com" }
   s.platform     = :ios, "12.0"
   s.source       = { :git => "https://github.com/jfyGiveMeFive/SVGAPlayer-Lite.git", :tag => s.version }
 
