@@ -1,68 +1,70 @@
 # SVGAPlayer-Lite
 
-SVGAPlayer-Lite 是一个轻量级高性能的 SVGA 动画播放器，基于 SVGAPlayer 优化而来。
+[中文文档](README_CN.md) | English
 
-## 性能优势
+A lightweight, high-performance SVGA animation player optimized from SVGAPlayer.
 
-相比原版 SVGAPlayer，SVGAPlayer-Lite 实现了显著的性能提升：
+## Performance Advantages
 
-- ⚡️ **内存占用降低 40-50%** - 从 20MB 降至 12MB
-- ⚡️ **CPU 占用降低 40%** - 从 22% 降至 13%
-- ⚡️ **启动速度提升 50%** - 从 185ms 降至 92ms
-- 📦 **包体积减少 15-20%** - 移除过时代码
-- 🎯 **稳定 60 FPS** - 优化渲染性能
+Compared to the original SVGAPlayer, SVGAPlayer-Lite achieves significant performance improvements:
 
-📊 **[查看详细优化说明](OPTIMIZATION.md)**
+- ⚡️ **40-50% Lower Memory Usage** - Reduced from 20MB to 12MB
+- ⚡️ **40% Lower CPU Usage** - Reduced from 22% to 13%
+- ⚡️ **50% Faster Startup** - Reduced from 185ms to 92ms
+- 📦 **15-20% Smaller Package Size** - Removed outdated code
+- 🎯 **Stable 60 FPS** - Optimized rendering performance
 
-## 特性
+📊 **[View Detailed Optimization](OPTIMIZATION.md)**
 
-- 🚀 轻量级实现，优化了性能和内存占用
-- 📦 支持 CocoaPods 集成
-- 🎨 完整支持 SVGA 动画格式
-- 💪 高性能渲染引擎
-- 🔧 易于集成和使用
-- ✅ 支持 iOS 12.0+
-- 🔥 **完美支持 Swift** - [查看 Swift 兼容性说明](SWIFT_COMPATIBILITY.md)
+## Features
 
-## 安装
+- 🚀 Lightweight implementation with optimized performance and memory usage
+- 📦 CocoaPods integration support
+- 🎨 Full SVGA animation format support
+- 💪 High-performance rendering engine
+- 🔧 Easy integration and usage
+- ✅ iOS 12.0+ support
+- 🔥 **Perfect Swift Support** - [View Swift Compatibility Guide](SWIFT_COMPATIBILITY.md)
+
+## Installation
 
 ### CocoaPods
 
-在你的 `Podfile` 中添加：
+Add to your `Podfile`:
 
 ```ruby
 pod 'SVGAPlayerLite'
 ```
 
-然后运行：
+Then run:
 
 ```bash
 pod install
 ```
 
-### 手动集成
+### Manual Integration
 
-1. 克隆或下载本仓库
-2. 将 `Source` 文件夹拖入你的项目
-3. 添加依赖：
+1. Clone or download this repository
+2. Drag the `Source` folder into your project
+3. Add dependencies:
    - SSZipArchive (2.4.3)
    - Protobuf (3.27.2)
 
-## 使用方法
+## Usage
 
-### 基本使用
+### Basic Usage
 
 ```objective-c
 #import <SVGAPlayerLite/SVGA.h>
 
-// 创建播放器
+// Create player
 SVGAPlayer *player = [[SVGAPlayer alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
 [self.view addSubview:player];
 
-// 创建解析器
+// Create parser
 SVGAParser *parser = [[SVGAParser alloc] init];
 
-// 从网络加载
+// Load from network
 [parser parseWithURL:[NSURL URLWithString:@"https://example.com/animation.svga"]
      completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
     if (videoItem) {
@@ -70,10 +72,10 @@ SVGAParser *parser = [[SVGAParser alloc] init];
         [player startAnimation];
     }
 } failureBlock:^(NSError * _Nullable error) {
-    NSLog(@"加载失败: %@", error);
+    NSLog(@"Load failed: %@", error);
 }];
 
-// 或从本地加载
+// Or load from local
 [parser parseWithNamed:@"animation" inBundle:nil completionBlock:^(SVGAVideoEntity * _Nullable videoItem) {
     if (videoItem) {
         player.videoItem = videoItem;
@@ -82,133 +84,138 @@ SVGAParser *parser = [[SVGAParser alloc] init];
 } failureBlock:nil];
 ```
 
-### Swift 使用
+### Swift Usage
 
 ```swift
 import SVGAPlayerLite
 
-// 创建播放器
+// Create player
 let player = SVGAPlayer(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
 view.addSubview(player)
 
-// 创建解析器
+// Create parser
 let parser = SVGAParser()
 
-// 从网络加载
+// Load from network
 parser.parse(with: URL(string: "https://example.com/animation.svga"), completionBlock: { videoItem in
     player.videoItem = videoItem
     player.startAnimation()
 }, failureBlock: { error in
-    print("加载失败: \(error)")
+    print("Load failed: \(error)")
 })
 
-// 或从本地加载
+// Or load from local
 parser.parse(withNamed: "animation", in: nil, completionBlock: { videoItem in
     player.videoItem = videoItem
     player.startAnimation()
 }, failureBlock: nil)
 ```
 
-### 高级功能
+### Advanced Features
 
-#### 循环播放
+#### Loop Playback
 
 ```objective-c
-player.loops = 0; // 0 表示无限循环
-player.loops = 3; // 播放 3 次
+player.loops = 0; // 0 means infinite loop
+player.loops = 3; // Play 3 times
 ```
 
-#### 播放控制
+#### Playback Control
 
 ```objective-c
-[player startAnimation];      // 开始播放
-[player pauseAnimation];      // 暂停播放
-[player stopAnimation];       // 停止播放
-[player stepToFrame:10 andPlay:YES]; // 跳转到指定帧
+[player startAnimation];      // Start playback
+[player pauseAnimation];      // Pause playback
+[player stopAnimation];       // Stop playback
+[player stepToFrame:10 andPlay:YES]; // Jump to specific frame
 ```
 
-#### 动态替换元素
+#### Dynamic Element Replacement
 
 ```objective-c
-// 替换图片
+// Replace image
 UIImage *image = [UIImage imageNamed:@"replacement"];
 [player setImage:image forKey:@"key" referenceLayer:nil];
 
-// 替换文本
+// Replace text
 NSAttributedString *text = [[NSAttributedString alloc] initWithString:@"Hello"];
 [player setAttributedText:text forKey:@"key"];
 ```
 
-#### 播放回调
+#### Playback Callbacks
 
 ```objective-c
 player.delegate = self;
 
-// 实现代理方法
+// Implement delegate method
 - (void)svgaPlayerDidFinishedAnimation:(SVGAPlayer *)player {
-    NSLog(@"动画播放完成");
+    NSLog(@"Animation finished");
 }
 ```
 
-## 系统要求
+## Requirements
 
 - iOS 12.0+
 - Xcode 11.0+
 
-## 依赖
+## Dependencies
 
 - SSZipArchive (2.4.3)
 - Protobuf (3.27.2)
 
-> 注：为确保所有用户使用相同的依赖版本，本项目使用固定版本号而非版本范围。
+> Note: To ensure all users have the same dependency versions, this project uses fixed version numbers instead of version ranges.
 
-## 与 SVGAPlayer 的区别
+## Differences from SVGAPlayer
 
-SVGAPlayer-Lite 是基于 SVGAPlayer 的轻量级版本，主要改进包括：
+SVGAPlayer-Lite is a lightweight version based on SVGAPlayer with the following improvements:
 
-- 优化了内存管理
-- 改进了渲染性能
-- 简化了部分 API
-- 更好的稳定性
+- Optimized memory management
+- Improved rendering performance
+- Simplified APIs
+- Better stability
 
-## 许可证
+## License
 
 Apache License 2.0
 
-## 相关链接
+## Related Links
 
-- [SVGA 官网](http://svga.io/)
+- [SVGA Official Website](http://svga.io/)
 - [SVGAPlayer-iOS](https://github.com/svga/SVGAPlayer-iOS)
 
-## 贡献
+## Contributing
 
-欢迎提交 Issue 和 Pull Request！
+Issues and Pull Requests are welcome!
 
-## 更新日志
+## Changelog
+
+### 1.0.6 (2026-01-15)
+- Add English documentation
+- Add language switcher between Chinese and English
+- Improve international accessibility
 
 ### 1.0.5 (2026-01-15)
-- 锁定依赖版本以确保一致性
-- SSZipArchive 固定为 2.4.3
-- Protobuf 固定为 3.27.2
-- 避免不同用户因版本差异导致的兼容性问题
+- Lock dependency versions for consistency
+- SSZipArchive fixed to 2.4.3
+- Protobuf fixed to 3.27.2
+- Prevent compatibility issues from version drift
 
 ### 1.0.4 (2026-01-15)
-- 更新依赖版本约束以提升兼容性
-- SSZipArchive 更新至 ~> 2.4
-- Protobuf 更新至 ~> 3.27
-- 改进依赖管理策略
+- Update dependency version constraints for better compatibility
+- SSZipArchive updated to ~> 2.4
+- Protobuf updated to ~> 3.27
+- Improved dependency management strategy
 
 ### 1.0.3 (2025-01-14)
-- 更新作者邮箱以保护隐私
-- 添加完整的 Swift 兼容性文档
+- Update author email for privacy protection
+- Add comprehensive Swift compatibility documentation
 
 ### 1.0.2
-- 性能优化与依赖更新
+- Performance optimization and dependency updates
 
 ### 1.0.1
-- 添加 CocoaPods Trunk 发布指南
+- Add CocoaPods Trunk publishing guide
 
 ### 1.0.0
-- 初始版本
-- 支持 CocoaPods 集成
-- 基于 SVGAPlayer 优化
+- Initial release
+- CocoaPods integration support
+- Optimized from SVGAPlayer
