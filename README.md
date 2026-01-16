@@ -1,5 +1,11 @@
 # SVGAPlayer-Lite
 
+[![CocoaPods](https://img.shields.io/cocoapods/v/SVGAPlayerLite.svg)](https://cocoapods.org/pods/SVGAPlayerLite)
+[![Platform](https://img.shields.io/cocoapods/p/SVGAPlayerLite.svg)](https://cocoapods.org/pods/SVGAPlayerLite)
+[![Swift](https://img.shields.io/badge/Swift-5.0+-orange.svg)](https://swift.org)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/jfyGiveMeFive/SVGAPlayer-Lite/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/jfyGiveMeFive/SVGAPlayer-Lite.svg)](https://github.com/jfyGiveMeFive/SVGAPlayer-Lite/stargazers)
+
 [中文文档](README_CN.md) | English
 
 A lightweight, high-performance SVGA animation player optimized from SVGAPlayer.
