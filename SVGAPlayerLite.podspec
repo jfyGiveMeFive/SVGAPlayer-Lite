@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SVGAPlayerLite"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "SVGAPlayerLite 是一个轻量级高性能的动画播放器"
   s.description  = <<-DESC
                    SVGAPlayerLite 是基于 SVGAPlayer 的轻量级版本；
