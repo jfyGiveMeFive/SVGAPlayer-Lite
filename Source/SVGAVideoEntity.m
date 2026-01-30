@@ -12,7 +12,11 @@
 #import "SVGAVideoSpriteEntity.h"
 #import "SVGAAudioEntity.h"
 #import "SVGAImage.h"
+#if SVGA_USE_SPM
+#import <ProtobufObjC/Svga.pbobjc.h>
+#else
 #import "Svga.pbobjc.h"
+#endif
 
 #define MP3_MAGIC_NUMBER "ID3"
 
