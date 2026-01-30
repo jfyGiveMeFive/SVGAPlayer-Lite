@@ -1,4 +1,26 @@
-Pods
-UserInterface.xcuserstate
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Xcode
 xcuserdata/
-*.lock
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+DerivedData/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Build artifacts
+build/
+*.o
+*.a
+*.dylib
