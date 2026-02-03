@@ -1,0 +1,33 @@
+SVGAPlayer-Lite
+Copyright 2026 jfyGiveMeFive
+https://github.com/jfyGiveMeFive/SVGAPlayer-Lite
+
+This project is a lightweight, high-performance optimization of SVGAPlayer.
+
+================================================================================
+
+This software contains code derived from SVGAPlayer-iOS:
+Copyright 2016 YY Inc.
+Licensed under the Apache License, Version 2.0
+https://github.com/svga/SVGAPlayer-iOS
+
+================================================================================
+
+ATTRIBUTION REQUIREMENTS
+
+If you use, modify, or redistribute this software, you MUST:
+
+1. Include a copy of the Apache License 2.0 (LICENSE file)
+2. Include this NOTICE file in your distribution
+3. Retain all copyright notices
+4. Clearly state any modifications you made to the original files
+5. Provide attribution to the original project:
+   "Based on SVGAPlayer-Lite by jfyGiveMeFive (https://github.com/jfyGiveMeFive/SVGAPlayer-Lite)"
+
+Failure to comply with these requirements constitutes a violation of the
+Apache License 2.0 and may result in legal action.
+
+================================================================================
+
+For questions or to report license violations, please open an issue at:
+https://github.com/jfyGiveMeFive/SVGAPlayer-Lite/issues
