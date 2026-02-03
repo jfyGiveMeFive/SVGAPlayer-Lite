@@ -8,9 +8,21 @@
 
 #import "SVGAParser.h"
 #import "SVGAVideoEntity.h"
+#if SVGA_USE_SPM
+#import <ProtobufObjC/Svga.pbobjc.h>
+#else
 #import "Svga.pbobjc.h"
+#endif
 #import <zlib.h>
+#if __has_include(<SSZipArchive/SSZipArchive.h>)
 #import <SSZipArchive/SSZipArchive.h>
+#elif __has_include(<ZipArchive/ZipArchive.h>)
+#import <ZipArchive/ZipArchive.h>
+#elif __has_include("SSZipArchive.h")
+#import "SSZipArchive.h"
+#else
+@import ZipArchive;
+#endif
 #import <CommonCrypto/CommonDigest.h>
 
 #define ZIP_MAGIC_NUMBER "PK"

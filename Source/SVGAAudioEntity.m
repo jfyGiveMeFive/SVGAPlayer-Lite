@@ -7,7 +7,11 @@
 //
 
 #import "SVGAAudioEntity.h"
+#if SVGA_USE_SPM
+#import <ProtobufObjC/Svga.pbobjc.h>
+#else
 #import "Svga.pbobjc.h"
+#endif
 
 @interface SVGAAudioEntity ()
 

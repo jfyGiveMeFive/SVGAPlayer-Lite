@@ -36,6 +36,22 @@ SVGAPlayer-Lite 是一个轻量级高性能的 SVGA 动画播放器，基于 SVG
 
 ## 安装
 
+### Swift Package Manager（推荐）
+
+通过 Xcode 添加包：
+
+1. File > Add Package Dependencies
+2. 输入：`https://github.com/jfyGiveMeFive/SVGAPlayer-Lite.git`
+3. 选择版本：`1.0.7` 或更高
+
+或在 `Package.swift` 中添加：
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/jfyGiveMeFive/SVGAPlayer-Lite.git", from: "1.0.7")
+]
+```
+
 ### CocoaPods
 
 在你的 `Podfile` 中添加：
@@ -189,6 +205,23 @@ Apache License 2.0
 
 - [SVGA 官网](http://svga.io/)
 - [SVGAPlayer-iOS](https://github.com/svga/SVGAPlayer-iOS)
+
+## 运行 Demo
+
+### 使用 CocoaPods（默认）
+
+```bash
+cd SVGAPlayer-Lite
+pod install
+open SVGAPlayerLite.xcworkspace
+```
+
+### 在自己的项目中使用 SPM
+
+1. 创建一个新的 Xcode 项目
+2. File > Add Package Dependencies
+3. 添加本地包：选择 `SVGAPlayer-Lite` 文件夹
+4. 将 `SVGAPlayerLite` 库链接到你的 target
 
 ## 贡献
 

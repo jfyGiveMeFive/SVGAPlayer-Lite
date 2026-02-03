@@ -36,6 +36,22 @@ Compared to the original SVGAPlayer, SVGAPlayer-Lite achieves significant perfor
 
 ## Installation
 
+### Swift Package Manager (Recommended)
+
+Add the package to your project via Xcode:
+
+1. File > Add Package Dependencies
+2. Enter: `https://github.com/jfyGiveMeFive/SVGAPlayer-Lite.git`
+3. Select version: `1.0.7` or later
+
+Or add to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/jfyGiveMeFive/SVGAPlayer-Lite.git", from: "1.0.7")
+]
+```
+
 ### CocoaPods
 
 Add to your `Podfile`:
@@ -189,6 +205,23 @@ Apache License 2.0
 
 - [SVGA Official Website](http://svga.io/)
 - [SVGAPlayer-iOS](https://github.com/svga/SVGAPlayer-iOS)
+
+## Running the Demo
+
+### Using CocoaPods (Default)
+
+```bash
+cd SVGAPlayer-Lite
+pod install
+open SVGAPlayerLite.xcworkspace
+```
+
+### Using SPM in Your Own Project
+
+1. Create a new Xcode project
+2. File > Add Package Dependencies
+3. Add local package: select the `SVGAPlayer-Lite` folder
+4. Link `SVGAPlayerLite` library to your target
 
 ## Contributing
 
