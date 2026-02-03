@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SVGAPlayerLite"
-  s.version      = "1.0.7"
+  s.version      = "1.0.8"
   s.summary      = "Lightweight, high-performance SVGA animation player for iOS with 40% less memory usage"
   s.description  = <<-DESC
                    SVGAPlayerLite is a lightweight, optimized version of SVGAPlayer with significant performance improvements.
