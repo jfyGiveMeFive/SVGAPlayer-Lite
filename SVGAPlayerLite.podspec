@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.license      = "Apache 2.0"
   s.author       = { "jfyGiveMeFive" => "jfyGiveMeFive@users.noreply.github.com" }
   s.platform     = :ios, "12.0"
-  s.source       = { :git => "https://github.com/jfyGiveMeFive/SVGAPlayer-Lite.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/jfyGiveMeFive/SVGAPlayer-Lite.git", :tag => "v#{s.version}" }
   s.swift_versions = ['5.0', '5.1', '5.2', '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.9']
 
   s.social_media_url = 'https://github.com/jfyGiveMeFive'
